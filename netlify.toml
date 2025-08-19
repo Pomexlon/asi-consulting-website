@@ -1,0 +1,17 @@
+# Basic Netlify configuration
+[build]
+  publish = "."
+
+# Redirect all 404s to 404.html (static site)
+[[redirects]]
+  from = "/*"
+  to = "/404.html"
+  status = 404
+
+# Security / misc headers
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer-when-downgrade"
