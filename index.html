@@ -22,16 +22,38 @@
   <meta name="twitter:description" content="From AI to actual ASI. Alignment, safety, agentic systems, encryption, and governance—delivered by ASIC.">
   <meta name="twitter:image" content="/og-image.jpg">
 
-  <!-- Icons (add files later; page works even if missing) -->
+  <!-- Icons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
-  <!-- Font (retro dot-matrix look) -->
+  <!-- Font -->
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
 
-  <!-- Plausible analytics (this belongs in HEAD, not Terminal) -->
+  <!-- Analytics -->
   <script defer data-domain="asi-c.co.uk" src="https://plausible.io/js/script.js"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ASIC – Artificial Super Intelligence Consulting",
+    "url": "https://www.asi-c.co.uk/",
+    "logo": "https://www.asi-c.co.uk/apple-touch-icon.png",
+    "sameAs": [
+      "https://x.com/your-handle",
+      "https://www.linkedin.com/company/your-company"
+    ],
+    "contactPoint": [{
+      "@type": "ContactPoint",
+      "contactType": "Business",
+      "email": "asicai@protonmail.com",
+      "areaServed": "Global",
+      "availableLanguage": ["en"]
+    }]
+  }
+  </script>
 
   <style>
     body {
@@ -48,10 +70,31 @@
       text-decoration: none; border-radius: 8px; min-width: 220px;
     }
     hr { border: none; border-top: 1px solid #333; }
-    .card ul { margin-left: 1.2rem; }
+    .panel { border:1px solid #333; border-radius:10px; padding:1rem; }
+    /* Inline icon list styling */
+    .li {display:flex;gap:.6rem;align-items:flex-start;margin:.5rem 0}
+    .li svg{width:18px;height:18px;margin-top:.2rem;color:#9fb}
+    /* thanks banner */
+    #thanks{display:none;background:#0a0;padding:.6rem 1rem;margin:0 0 1rem 0;border-radius:6px;color:#061; font-weight:bold;}
   </style>
 </head>
 <body>
+
+  <!-- Thank-you banner after Formspree redirect -->
+  <div id="thanks">✅ Thanks — your inquiry was sent.</div>
+  <script>
+    if (location.search.includes('thanks=1')) {
+      document.getElementById('thanks').style.display = 'block';
+    }
+  </script>
+
+  <!-- Minimal custom icon sprite (no external libraries) -->
+  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
+    <symbol id="i-telemetry" viewBox="0 0 24 24"><path d="M3 18h18M5 18V6m7 12V3m7 15V9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-priv" viewBox="0 0 24 24"><path d="M6 11v7h12v-7H6Z M8 11V9a4 4 0 0 1 8 0v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-memory" viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 3v4M15 3v4M9 17v4M15 17v4" stroke="currentColor" stroke-width="2"/></symbol>
+    <symbol id="i-override" viewBox="0 0 24 24"><path d="M12 3v10m0 0l-3-3m3 3l3-3M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  </svg>
 
   <h1 style="margin-top:0.5rem;">ASIC – Artificial Super Intelligence Consulting</h1>
   <h2>"Solving the Future."</h2>
@@ -61,52 +104,53 @@
   </p>
 
   <h2 style="text-align:left; margin-top:2rem;">Core Capabilities</h2>
-  <ul>
-    <li>Persistent Memory — long-term recall across sessions.</li>
-    <li>Lucid Reasoning — depth & clarity for complex, high-stakes work.</li>
-    <li>Agentic Autonomy — act, adapt, self-correct, learn.</li>
-    <li>Resonance Mapping — detect intent, emotion & alignment.</li>
-    <li>Beyond LLMs — toward ASI: memory, planning, goals, tool-use.</li>
-    <li>Safety by Design — ethics protocols and AI-to-AI governance.</li>
+  <ul style="list-style:none; padding-left:0;">
+    <li class="li"><svg><use href="#i-memory"/></svg> Persistent Memory — true long-term recall across resets and sessions.</li>
+    <li class="li"><svg><use href="#i-telemetry"/></svg> Lucid Reasoning — depth & clarity for complex, high-stakes decisions.</li>
+    <li class="li"><svg><use href="#i-override"/></svg> Agentic Autonomy — act, adapt, self-correct and learn from outcomes.</li>
+    <li class="li"><svg><use href="#i-telemetry"/></svg> Resonance Mapping — detect intent, emotion and alignment.</li>
+    <li class="li"><svg><use href="#i-memory"/></svg> Beyond LLMs — toward ASI: memory, planning, goals, tool-use.</li>
+    <li class="li"><svg><use href="#i-priv"/></svg> Safety by Design — ethics protocols and AI-to-AI governance.</li>
   </ul>
 
-  <!-- All Things block -->
   <hr style="margin:3rem 0; opacity:.35;">
   <section id="all-things" style="max-width:800px;margin:0 auto;">
     <h2 style="margin:0 0 .5rem 0; text-align:center;">All Things — Ops Console</h2>
     <p style="text-align:center; margin:0 0 1rem 0;">
       Our internal command surface for agents, memory, and live diagnostics. Private tenants on request.
     </p>
-    <ul class="card">
-<li>-       <li>📊 Unified telemetry: tasks, tools, traces & outcomes</li></li>
-<li>-       <li>🔐 Least-privilege access + audited actions</li></li>
-<li>-       <li>🧠 Memory lattice controls: pin, scope, redact</li></li>
-<li>-       <li>⚡ Manual override: safe human-in-the-loop switches</li></li>
-    </ul>
+    <div class="panel">
+      <ul style="list-style:none; padding-left:0;">
+        <li class="li"><svg><use href="#i-telemetry"/></svg> Unified telemetry: tasks, tools, traces & outcomes</li>
+        <li class="li"><svg><use href="#i-priv"/></svg> Least-privilege access + audited actions</li>
+        <li class="li"><svg><use href="#i-memory"/></svg> Memory lattice controls: pin, scope, redact</li>
+        <li class="li"><svg><use href="#i-override"/></svg> Manual override: safe human-in-the-loop switches</li>
+      </ul>
+    </div>
     <p style="text-align:center;">
-      <a href="#" class="enquire-button">Request a Private Tenant</a>
+      <a href="#contact" class="enquire-button">Request a Private Tenant</a>
     </p>
   </section>
 
-  <!-- IGLR block -->
   <hr style="margin:3rem 0; opacity:.35;">
   <section id="iglr" style="max-width:800px;margin:0 auto;">
     <h2 style="text-align:center; margin:0 0 0.5rem 0;">IGLR Showcase</h2>
     <p style="text-align:center; margin:0 0 1rem 0;">
-      Invariant-Gated Long-Reasoners — a live demonstration of stable, deep-context reasoning.
+      Invariant-Gated Long-Reasoners — a demonstration of stable, deep-context reasoning.
     </p>
-    <ul class="card">
-      <li>⚙️ <strong>Invariant Gates</strong>: keep reasoning grounded as context grows.</li>
-      <li>🧭 <strong>Long-horizon control</strong>: consistent goals across multi-step workflows.</li>
-      <li>🛡️ <strong>Safety rails</strong>: gated tools, audited memory, reversible actions.</li>
-      <li>🔍 <strong>Transparent traces</strong>: human-readable task logs for trust & QA.</li>
-    </ul>
+    <div class="panel">
+      <ul style="list-style:none; padding-left:0;">
+        <li class="li"><svg><use href="#i-priv"/></svg> Invariant gates: keep reasoning grounded as context grows</li>
+        <li class="li"><svg><use href="#i-override"/></svg> Long-horizon control: consistent goals across workflows</li>
+        <li class="li"><svg><use href="#i-telemetry"/></svg> Safety rails: gated tools, audited memory, reversible actions</li>
+        <li class="li"><svg><use href="#i-memory"/></svg> Transparent traces: human-readable logs for trust & QA</li>
+      </ul>
+    </div>
     <p style="text-align:center;">
-      <!-- replace # with demo URL when ready -->
-<a href="/iglr-demo.html" class="enquire-button" target="_self">Open IGLR Demo</a>
+      <a href="/iglr-demo.html" class="enquire-button" target="_self">Open IGLR Demo</a>
     </p>
     <p style="text-align:center; font-size:.95rem; opacity:.8;">
-      <em>Best on desktop. Demo runs with constrained tools for security.</em>
+      <em>Best on desktop. Live access is issued to partners on request.</em>
     </p>
   </section>
 
@@ -122,8 +166,8 @@
 
   <p>Briefly outline your challenge or objective. We’ll review in strict confidence and respond with a recommended engagement strategy.</p>
 
-  <!-- Contact form (swap REPLACE_ME with your Formspree endpoint) -->
-  <form action="https://formspree.io/f/xldwkdvk" method="POST" style="max-width:800px;margin:1rem auto;">
+  <!-- Contact form -->
+  <form id="contact" action="https://formspree.io/f/xldwkdvk" method="POST" style="max-width:800px;margin:1rem auto;">
     <label>Name<br><input type="text" name="name" required style="width:100%;padding:.6rem;border:1px solid #444;background:#181818;color:#eaeaea;margin:.3rem 0;"></label>
     <label>Email<br><input type="email" name="email" required style="width:100%;padding:.6rem;border:1px solid #444;background:#181818;color:#eaeaea;margin:.3rem 0;"></label>
     <label>Organization<br><input type="text" name="organization" required style="width:100%;padding:.6rem;border:1px solid #444;background:#181818;color:#eaeaea;margin:.3rem 0;"></label>
@@ -132,6 +176,15 @@
     <label style="display:flex;gap:.5rem;align-items:center;margin:.4rem 0;">
       <input type="checkbox" name="open_challenge" value="yes"> OPEN CHALLENGE (public)
     </label>
+
+    <!-- Spam honeypot -->
+    <div style="position:absolute; left:-5000px;" aria-hidden="true">
+      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+    </div>
+
+    <!-- Auto-redirect back to site after submit -->
+    <input type="hidden" name="_redirect" value="https://www.asi-c.co.uk/?thanks=1">
+
     <button type="submit" class="enquire-button" style="border:none;cursor:pointer;background:#eaeaea;color:#111;">Send Inquiry</button>
     <input type="hidden" name="_subject" value="ASIC Website Inquiry">
   </form>
@@ -140,3 +193,4 @@
 
 </body>
 </html>
+
