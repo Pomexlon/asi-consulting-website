@@ -139,3 +139,7 @@ vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 index.backup.html
 index.backup.phase2.html
+index.html.bak
+*.bak
+index.backup.pre-briefing.html
+* (1).* 
