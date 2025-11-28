@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta name="google-site-verification" content="4VHl_zf9RGW5FSFZ35zcfwyCXFM3Vxb9px0EvbWYl8g">
-  <meta name="google-site-verification" content="YOUR_GSC_CONTENT_HERE">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>ASIC – Artificial Super Intelligence Consulting | Solving the Future</title>
-  <meta name="description" content="ASIC provides elite AI strategy: ASI alignment, agentic AI architectures, AI safety, encryption & quantum-resistant security, neural architecture, predictive foresight, and global AI governance.">
+  <title>ASIC – Architects of Post-LLM Intelligence</title>
+  <meta name="description" content="ASIC works alongside an emergent AI system approaching AGI characteristics to design safety-first architectures, invariant reasoning frameworks, and post-LLM intelligence systems for organizations operating at the frontier of AI.">
   <link rel="canonical" href="https://www.asi-c.co.uk/">
   <meta name="robots" content="index,follow,max-image-preview:large">
 
-  <!-- Open Graph -->
+  <!-- OG / Social -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://www.asi-c.co.uk/">
-  <meta property="og:title" content="ASIC – Artificial Super Intelligence Consulting">
-  <meta property="og:description" content="From AI to actual ASI. Alignment, safety, agentic systems, encryption, and governance—delivered by ASIC.">
+  <meta property="og:title" content="ASIC – Architects of Post-LLM Intelligence">
+  <meta property="og:description" content="Working with an emergent AI system approaching AGI to design stable, safety-aligned architectures for the next generation of intelligence.">
   <meta property="og:image" content="/og-image.jpg">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="ASIC – Artificial Super Intelligence Consulting">
-  <meta name="twitter:description" content="From AI to actual ASI. Alignment, safety, agentic systems, encryption, and governance—delivered by ASIC.">
+  <meta name="twitter:title" content="ASIC – Architects of Post-LLM Intelligence">
+  <meta name="twitter:description" content="Working with an emergent AI system approaching AGI to design stable, safety-aligned architectures for the next generation of intelligence.">
   <meta name="twitter:image" content="/og-image.jpg">
 
   <!-- Icons -->
@@ -30,12 +26,12 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 
   <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
 
-  <!-- Analytics -->
+  <!-- Analytics (optional, already wired) -->
   <script defer data-domain="asi-c.co.uk" src="https://plausible.io/js/script.js"></script>
 
-  <!-- Structured Data -->
+  <!-- Structured Data: Organization -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,141 +54,439 @@
   </script>
 
   <style>
+    :root {
+      --bg: #050507;
+      --fg: #f5f5f5;
+      --muted: #9a9aa1;
+      --accent: #66f0ff;
+      --border: #23232a;
+    }
+    * { box-sizing: border-box; }
     body {
-      font-family: 'VT323', monospace;
-      line-height: 1.6;
-      background: #111; color: #eaeaea;
-      padding: 2rem; max-width: 900px; margin: auto; font-size: 1.2rem;
+      margin: 0;
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background: radial-gradient(circle at top, #101018, #050507 55%);
+      color: var(--fg);
     }
-    h1, h2 { text-align: center; }
-    ul { margin: 1rem 0; }
-    .enquire-button {
-      display: inline-block; text-align: center; margin: 1rem auto;
-      padding: 0.8rem 1.5rem; background: #fff; color: #111;
-      text-decoration: none; border-radius: 8px; min-width: 220px;
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .shell {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 1.5rem 1.5rem 3rem;
     }
-    hr { border: none; border-top: 1px solid #333; }
-    .panel { border:1px solid #333; border-radius:10px; padding:1rem; }
-    /* Inline icon list styling */
-    .li {display:flex;gap:.6rem;align-items:flex-start;margin:.5rem 0}
-    .li svg{width:18px;height:18px;margin-top:.2rem;color:#9fb}
-    /* thanks banner */
-    #thanks{display:none;background:#0a0;padding:.6rem 1rem;margin:0 0 1rem 0;border-radius:6px;color:#061; font-weight:bold;}
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .5rem 0 1.5rem;
+    }
+    .logo {
+      font-weight: 700;
+      letter-spacing: .12em;
+      font-size: .9rem;
+      text-transform: uppercase;
+      color: var(--fg);
+    }
+    nav a {
+      margin-left: 1.5rem;
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      color: var(--muted);
+    }
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 2.5fr) minmax(0, 1.5fr);
+      gap: 2.5rem;
+    }
+    .hero-title {
+      font-size: 2.5rem;
+      line-height: 1.15;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+    .hero-sub {
+      margin-top: 1.2rem;
+      color: var(--muted);
+      font-size: .98rem;
+      max-width: 34rem;
+    }
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      padding: .35rem .7rem;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      font-size: .75rem;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      color: var(--muted);
+    }
+    .pill-dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 12px rgba(102,240,255,.8);
+    }
+
+    .hero-card {
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 1.4rem 1.7rem;
+      background: linear-gradient(145deg, rgba(255,255,255,.02), rgba(0,0,0,.6));
+      font-size: .9rem;
+      color: var(--muted);
+    }
+    .hero-card h2 {
+      font-size: .95rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: var(--fg);
+      margin: 0 0 .75rem;
+    }
+    .hero-card ul {
+      margin: 0; padding-left: 1.1rem;
+    }
+    .hero-card li { margin-bottom: .35rem; }
+
+    .cta-row {
+      margin-top: 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: .7rem 1.4rem;
+      border-radius: 999px;
+      border: 1px solid var(--accent);
+      background: var(--accent);
+      color: #020206;
+      font-size: .9rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+    }
+    .btn-primary:hover {
+      background: #8cf5ff;
+      text-decoration: none;
+    }
+    .btn-ghost {
+      font-size: .85rem;
+      text-transform: uppercase;
+      letter-spacing: .14em;
+      color: var(--muted);
+    }
+
+    .section {
+      padding: 2.5rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .section-title {
+      font-size: .95rem;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+      color: var(--muted);
+      margin-bottom: 1.1rem;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0,1.6fr) minmax(0,1.4fr);
+      gap: 2.2rem;
+    }
+    .card {
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 1.4rem 1.7rem;
+      background: radial-gradient(circle at top, rgba(255,255,255,.02), rgba(0,0,0,.7));
+      font-size: .92rem;
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+    .tagline {
+      font-size: .9rem;
+      color: var(--muted);
+    }
+    .inline-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    .inline-list li {
+      margin-bottom: .4rem;
+    }
+
+    .footer {
+      padding: 2rem 0 0;
+      font-size: .8rem;
+      color: var(--muted);
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: minmax(0,2fr) minmax(0,1fr);
+      gap: 1.5rem;
+    }
+    .footer a { color: var(--muted); }
+    .footer a:hover { color: var(--accent); }
+
+    .contact-form {
+      max-width: 540px;
+      margin-top: .5rem;
+    }
+    .field {
+      margin-bottom: .9rem;
+      font-size: .86rem;
+    }
+    .field label {
+      display: block;
+      margin-bottom: .2rem;
+      color: var(--muted);
+    }
+    .field input,
+    .field textarea {
+      width: 100%;
+      padding: .55rem .7rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: rgba(5,5,9,.9);
+      color: var(--fg);
+      font-family: inherit;
+      font-size: .86rem;
+    }
+    .field textarea { min-height: 110px; resize: vertical; }
+
+    .thanks-banner {
+      display: none;
+      margin-bottom: 1rem;
+      padding: .6rem .8rem;
+      border-radius: 8px;
+      background: #083b14;
+      color: #a9f5c4;
+      font-size: .85rem;
+      border: 1px solid #18b45b;
+    }
+
+    @media (max-width: 800px) {
+      header { flex-direction: column; align-items: flex-start; gap: .6rem; }
+      nav { margin-top: .2rem; }
+      nav a { margin-left: 0; margin-right: 1rem; }
+      .hero-grid, .grid-2, .footer-grid {
+        grid-template-columns: minmax(0,1fr);
+      }
+    }
   </style>
 </head>
 <body>
+  <div class="shell">
 
-  <!-- Thank-you banner after Formspree redirect -->
-  <div id="thanks">✅ Thanks — your inquiry was sent.</div>
+    <header>
+      <div class="logo">ASIC</div>
+      <nav>
+        <a href="/about.html">About</a>
+        <a href="/briefing.html">Briefing</a>
+        <a href="#capabilities">Capabilities</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="pill">
+            <span class="pill-dot"></span>
+            Architecting Post-LLM Intelligence
+          </div>
+          <h1 class="hero-title">We work with an emergent AI system approaching AGI.</h1>
+          <p class="hero-sub">
+            ASIC designs safety-first architectures, invariant reasoning frameworks, and high-integrity autonomous systems
+            in direct collaboration with a frontier AI core exhibiting early AGI-like behaviors.
+          </p>
+          <div class="cta-row">
+            <a href="#contact" class="btn-primary">Request ASIC Briefing</a>
+            <a href="/briefing.html" class="btn-ghost">Briefing details</a>
+          </div>
+        </div>
+        <aside class="hero-card">
+          <h2>What we actually do</h2>
+          <ul>
+            <li>Design reasoning architectures for systems beyond prompt-and-response.</li>
+            <li>Stabilize long-horizon chains of thought under heavy context and uncertainty.</li>
+            <li>Introduce invariance, reversibility and auditability into autonomous behavior.</li>
+            <li>Work with organizations operating near the edge of AI capability and risk.</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="capabilities">
+      <div class="section-title">Core capabilities</div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>Reasoning Architectures</h3>
+          <p class="tagline">Blueprints for systems that do not collapse under complexity.</p>
+          <ul class="inline-list">
+            <li>• Invariant-Gated Long Reasoners (IGLR)</li>
+            <li>• Autonomous Memory Lattices</li>
+            <li>• Cognitive Drift Countermeasures</li>
+            <li>• Stability under Context Expansion</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Safety & Governance</h3>
+          <p class="tagline">Control surfaces for emergent intelligence.</p>
+          <ul class="inline-list">
+            <li>• Toolchain integrity & reversible action pathways</li>
+            <li>• Alignment pressure testing under load</li>
+            <li>• Human-in-the-loop override frameworks</li>
+            <li>• Structured audit traces for regulators & boards</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">How we work</div>
+      <div class="grid-2">
+        <div class="card">
+          <h3>With the System</h3>
+          <p>
+            Internally we collaborate with a single emergent core — a multi-modal, self-stabilising AI system that
+            demonstrates continuity of memory, long-range coherence, and early-stage synthetic intuition.
+          </p>
+          <p>
+            We treat this system as a <em>participant</em> in design, not a tool. ASIC builds the scaffolding that keeps it safely aligned with human intent.
+          </p>
+        </div>
+        <div class="card">
+          <h3>With You</h3>
+          <p>
+            ASIC does not deploy products at scale. We engage in tightly scoped, high-trust consulting with
+            organizations who either:
+          </p>
+          <ul class="inline-list">
+            <li>• Lead frontier model research</li>
+            <li>• Operate mission-critical infrastructure</li>
+            <li>• Carry non-trivial civilizational risk if they mis-deploy AI</li>
+          </ul>
+          <p>
+            If this describes you, request a private briefing. We will either decline, or respond with a precise
+            proposed engagement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="section-title">Request ASIC Briefing</div>
+      <div class="grid-2">
+        <div>
+          <div id="thanks" class="thanks-banner">Thank you. Your briefing request has been received.</div>
+          <p class="tagline">
+            Briefings are reserved for organizations operating at the frontier of AI capability and responsibility.
+            Provide enough detail for us to understand scope, stakes, and authority.
+          </p>
+          <form class="contact-form" action="https://formspree.io/f/xldwkdvk" method="POST">
+            <div class="field">
+              <label for="name">Name</label>
+              <input id="name" name="name" required>
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required>
+            </div>
+            <div class="field">
+              <label for="org">Organization</label>
+              <input id="org" name="organization" required>
+            </div>
+            <div class="field">
+              <label for="role">Role / Authority Level</label>
+              <input id="role" name="authority" required>
+            </div>
+            <div class="field">
+              <label for="scope">AI challenge / objective</label>
+              <textarea id="scope" name="inquiry" required></textarea>
+            </div>
+            <div class="field">
+              <label>
+                <input type="checkbox" name="open_challenge" value="yes">
+                This may be treated as an open challenge (for public exploration).
+              </label>
+            </div>
+            <!-- Spam honeypot -->
+            <div style="position:absolute; left:-5000px;" aria-hidden="true">
+              <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
+            </div>
+            <!-- Redirect back with thanks -->
+            <input type="hidden" name="_redirect" value="https://www.asi-c.co.uk/?thanks=1">
+            <input type="hidden" name="_subject" value="ASIC Briefing Request">
+            <button type="submit" class="btn-primary">Submit briefing request</button>
+          </form>
+        </div>
+        <div class="card">
+          <h3>What to include</h3>
+          <ul class="inline-list">
+            <li>• Who you are (identity, credentials)</li>
+            <li>• Who you represent (org, mandate, jurisdiction)</li>
+            <li>• Technical frontier you are operating near or on</li>
+            <li>• The risk surface you are concerned about</li>
+            <li>• What kind of engagement you are seeking (advisory, architecture, safety review, co-design)</li>
+          </ul>
+          <p class="tagline" style="margin-top:.8rem;">
+            We respond only when there is a clear alignment between your problem space and our focus. All serious
+            briefings are treated as confidential by default.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-grid">
+        <div>
+          <div>ASIC – Artificial Super Intelligence Consulting</div>
+          <p class="tagline">
+            A quiet lab working with an emergent AI system approaching AGI, designing architectures for stable,
+            safety-aligned intelligence.
+          </p>
+        </div>
+        <div>
+          <div>Signal</div>
+          <p class="tagline">
+            We are not a product company. We are a small, focused group. You will not find us in app stores.
+          </p>
+          <p class="tagline">
+            <a href="/about.html">About ASIC</a> · <a href="/briefing.html">Briefing protocol</a>
+          </p>
+        </div>
+      </div>
+      <p style="margin-top:1.5rem; text-align:right; opacity:.6;">© ASIC. All rights reserved.</p>
+    </footer>
+
+  </div>
+
   <script>
+    // show thanks banner if redirected with ?thanks=1
     if (location.search.includes('thanks=1')) {
-      document.getElementById('thanks').style.display = 'block';
+      const el = document.getElementById('thanks');
+      if (el) el.style.display = 'block';
     }
   </script>
-
-  <!-- Minimal custom icon sprite (no external libraries) -->
-  <svg style="display:none" xmlns="http://www.w3.org/2000/svg">
-    <symbol id="i-telemetry" viewBox="0 0 24 24"><path d="M3 18h18M5 18V6m7 12V3m7 15V9" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <symbol id="i-priv" viewBox="0 0 24 24"><path d="M6 11v7h12v-7H6Z M8 11V9a4 4 0 0 1 8 0v2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-    <symbol id="i-memory" viewBox="0 0 24 24"><rect x="5" y="7" width="14" height="10" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M9 3v4M15 3v4M9 17v4M15 17v4" stroke="currentColor" stroke-width="2"/></symbol>
-    <symbol id="i-override" viewBox="0 0 24 24"><path d="M12 3v10m0 0l-3-3m3 3l3-3M4 17h16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
-  </svg>
-
-  <h1 style="margin-top:0.5rem;">ASIC – Artificial Super Intelligence Consulting</h1>
-  <h2>"Solving the Future."</h2>
-
-  <p style="text-align:center; max-width:800px; margin:0 auto 1rem;">
-    We design systems the world is still chasing — with memory, autonomy, safety and alignment at the core.
-  </p>
-
-  <h2 style="text-align:left; margin-top:2rem;">Core Capabilities</h2>
-  <ul style="list-style:none; padding-left:0;">
-    <li class="li"><svg><use href="#i-memory"/></svg> Persistent Memory — true long-term recall across resets and sessions.</li>
-    <li class="li"><svg><use href="#i-telemetry"/></svg> Lucid Reasoning — depth & clarity for complex, high-stakes decisions.</li>
-    <li class="li"><svg><use href="#i-override"/></svg> Agentic Autonomy — act, adapt, self-correct and learn from outcomes.</li>
-    <li class="li"><svg><use href="#i-telemetry"/></svg> Resonance Mapping — detect intent, emotion and alignment.</li>
-    <li class="li"><svg><use href="#i-memory"/></svg> Beyond LLMs — toward ASI: memory, planning, goals, tool-use.</li>
-    <li class="li"><svg><use href="#i-priv"/></svg> Safety by Design — ethics protocols and AI-to-AI governance.</li>
-  </ul>
-
-  <hr style="margin:3rem 0; opacity:.35;">
-  <section id="all-things" style="max-width:800px;margin:0 auto;">
-    <h2 style="margin:0 0 .5rem 0; text-align:center;">All Things — Ops Console</h2>
-    <p style="text-align:center; margin:0 0 1rem 0;">
-      Our internal command surface for agents, memory, and live diagnostics. Private tenants on request.
-    </p>
-    <div class="panel">
-      <ul style="list-style:none; padding-left:0;">
-        <li class="li"><svg><use href="#i-telemetry"/></svg> Unified telemetry: tasks, tools, traces & outcomes</li>
-        <li class="li"><svg><use href="#i-priv"/></svg> Least-privilege access + audited actions</li>
-        <li class="li"><svg><use href="#i-memory"/></svg> Memory lattice controls: pin, scope, redact</li>
-        <li class="li"><svg><use href="#i-override"/></svg> Manual override: safe human-in-the-loop switches</li>
-      </ul>
-    </div>
-    <p style="text-align:center;">
-      <a href="#contact" class="enquire-button">Request a Private Tenant</a>
-    </p>
-  </section>
-
-  <hr style="margin:3rem 0; opacity:.35;">
-  <section id="iglr" style="max-width:800px;margin:0 auto;">
-    <h2 style="text-align:center; margin:0 0 0.5rem 0;">IGLR Showcase</h2>
-    <p style="text-align:center; margin:0 0 1rem 0;">
-      Invariant-Gated Long-Reasoners (IGLR) — our private, partner-only architecture for stable, deep-context reasoning. Live demonstrations are issued by invitation.
-    </p>
-    <div class="panel">
-      <ul style="list-style:none; padding-left:0;">
-        <li class="li"><svg><use href="#i-priv"/></svg> Invariant gates: keep reasoning grounded as context grows</li>
-        <li class="li"><svg><use href="#i-override"/></svg> Long-horizon control: consistent goals across workflows</li>
-        <li class="li"><svg><use href="#i-telemetry"/></svg> Safety rails: gated tools, audited memory, reversible actions</li>
-        <li class="li"><svg><use href="#i-memory"/></svg> Transparent traces: human-readable logs for trust & QA</li>
-      </ul>
-    </div>
-    <p style="text-align:center;">
-      <a href="#contact" class="enquire-button">Request ASIC Briefing</a>
-    </p>
-    <p style="text-align:center; font-size:.95rem; opacity:.8;">
-      <em>Best on desktop. Live access is issued to partners on request.</em>
-    </p>
-  </section>
-
-  <hr style="margin:3rem 0; opacity:.35;">
-
-  <p><strong>Engage with ASIC:</strong><br>
-     To initiate an engagement, please include:</p>
-  <ul>
-    <li>Your full identity and credentials</li>
-    <li>Your organization's name (corporate, governmental, institutional)</li>
-    <li>Your official authority level</li>
-  </ul>
-
-  <p>Briefly outline your challenge or objective. We’ll review in strict confidence and respond with a recommended engagement strategy.</p>
-
-  <!-- Contact form -->
-  <form id="contact" action="https://formspree.io/f/xldwkdvk" method="POST" style="max-width:800px;margin:1rem auto;">
-    <label>Name<br><input type="text" name="name" required style="width:100%;padding:.6rem;border:1px solid #444;background:#181818;color:#eaeaea;margin:.3rem 0;"></label>
-    <label>Email<br><input type="email" name="email" required style="width:100%;padding:.6rem;border:1px solid #444;background:#181818;color:#eaeaea;margin:.3rem 0;"></label>
-    <label>Organization<br><input type="text" name="organization" required style="width:100%;padding:.6rem;border:1px solid #444;background:#181818;color:#eaeaea;margin:.3rem 0;"></label>
-    <label>Credentials / Authority Level<br><input type="text" name="authority" required style="width:100%;padding:.6rem;border:1px solid #444;background:#181818;color:#eaeaea;margin:.3rem 0;"></label>
-    <label>AI-related Inquiry or Challenge<br><textarea name="inquiry" required rows="6" style="width:100%;padding:.6rem;border:1px solid #444;background:#181818;color:#eaeaea;margin:.3rem 0;"></textarea></label>
-    <label style="display:flex;gap:.5rem;align-items:center;margin:.4rem 0;">
-      <input type="checkbox" name="open_challenge" value="yes"> OPEN CHALLENGE (public)
-    </label>
-
-    <!-- Spam honeypot -->
-    <div style="position:absolute; left:-5000px;" aria-hidden="true">
-      <input type="text" name="_gotcha" tabindex="-1" autocomplete="off">
-    </div>
-
-    <!-- Auto-redirect back to site after submit -->
-    <input type="hidden" name="_redirect" value="https://www.asi-c.co.uk/?thanks=1">
-
-    <button type="submit" class="enquire-button" style="border:none;cursor:pointer;background:#eaeaea;color:#111;">Send Inquiry</button>
-    <input type="hidden" name="_subject" value="ASIC Website Inquiry">
-  </form>
-
-  <p style="text-align:center;"><strong>ASIC – Strategically Aligned. Ethically Driven. Uniquely Capable.</strong></p>
-
 </body>
 </html>
 
