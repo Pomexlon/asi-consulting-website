@@ -1,52 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Briefing Protocol – ASIC</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="How ASIC conducts private briefings with organizations operating at the frontier of AI capability and responsibility.">
-  <link rel="canonical" href="https://www.asi-c.co.uk/briefing.html">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASI — Briefings with ASI</title>
+
   <style>
-    body{margin:0;font-family:'Inter',system-ui;background:#050507;color:#f5f5f5;}
-    a{color:#66f0ff;text-decoration:none;}a:hover{text-decoration:underline;}
-    .shell{max-width:900px;margin:0 auto;padding:1.5rem 1.5rem 3rem;}
-    header{display:flex;align-items:center;justify-content:space-between;padding:.5rem 0 2rem;}
-    .logo{font-weight:700;letter-spacing:.12em;font-size:.9rem;text-transform:uppercase;}
-    nav a{margin-left:1.5rem;font-size:.85rem;text-transform:uppercase;letter-spacing:.08em;color:#9a9aa1;}
-    nav a:hover{color:#66f0ff;}
-    h1{font-size:2rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:.75rem;}
-    h2{font-size:1rem;text-transform:uppercase;letter-spacing:.16em;margin-top:2rem;}
-    p{line-height:1.7;font-size:.95rem;color:#d2d2d7;}
-    ul{line-height:1.7;font-size:.95rem;color:#d2d2d7;}
-    .tag{font-size:.8rem;text-transform:uppercase;letter-spacing:.16em;color:#9a9aa1;margin-bottom:.4rem;}
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top left, #111827, #020617);
+      color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        radial-gradient(1px 1px at 15% 30%, rgba(248,250,252,0.65), transparent),
+        radial-gradient(1px 1px at 85% 15%, rgba(248,250,252,0.45), transparent),
+        radial-gradient(1px 1px at 55% 75%, rgba(248,250,252,0.35), transparent),
+        radial-gradient(220px 220px at 80% 80%, rgba(251,191,36,0.14), transparent);
+      opacity: 0.6;
+      mix-blend-mode: screen;
+      z-index: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 40px;
+      background: #020617cc;
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    header a {
+      color: #d1d5db;
+      margin-left: 28px;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    header a:hover {
+      color: #fbbf24;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 80px 24px 70px;
+      position: relative;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 34px;
+      font-weight: 600;
+      color: #f9fafb;
+      letter-spacing: 0.05em;
+      margin-bottom: 18px;
+      text-transform: uppercase;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 32px;
+      margin-bottom: 10px;
+      color: #f9fafb;
+    }
+
+    .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    p {
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    ul {
+      padding-left: 20px;
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .note {
+      font-size: 13px;
+      color: #9ca3af;
+      margin-top: 10px;
+    }
+
+    .cta {
+      margin-top: 28px;
+      padding: 20px 22px;
+      border-radius: 16px;
+      border: 1px solid rgba(251,191,36,0.3);
+      background: rgba(15,23,42,0.85);
+      font-size: 14px;
+    }
+
+    .cta a {
+      color: #fbbf24;
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .cta a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 50px 24px;
+      text-align: center;
+      color: #52525b;
+      font-size: 13px;
+    }
   </style>
 </head>
 <body>
-<div class="shell">
-  <header>
-    <div class="logo"><a href="/">ASIC</a></div>
-    <nav>
-      <a href="/about.html">About</a>
-      <a href="/briefing.html">Briefing</a>
-      <a href="/#capabilities">Capabilities</a>
-      <a href="/#contact">Contact</a>
-    </nav>
-  </header>
 
-  <div class="tag">Protocol</div>
-  <h1>Briefings with ASIC</h1>
+<header>
+  <div style="font-weight:600; letter-spacing:1px; color:white;">ASI</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="briefing.html">Briefing</a>
+    <a href="architectures.html">Architectures</a>
+    <a href="mailto:asicai@protonmail.com">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="label">Protocol</div>
+  <h1>Briefings with ASI</h1>
 
   <p>
-    ASIC briefings are not sales presentations. They are working sessions focused on understanding how your systems, incentives, and risks intersect with emergent AI capability.
+    ASI briefings are not sales presentations. They are working sessions focused
+    on how your systems, incentives, and risks intersect with emergent AI
+    capability.
   </p>
 
   <h2>What a briefing is</h2>
   <ul>
-    <li>a structured conversation with one or more ASIC principals,</li>
+    <li>a structured conversation with one or more ASI principals,</li>
     <li>a chance to map your current architecture, constraints, and threat model,</li>
     <li>a venue to test whether our work aligns with your actual problems.</li>
   </ul>
@@ -60,23 +178,45 @@
 
   <h2>What we might propose</h2>
   <p>
-    If, after the briefing, there is a clear alignment between your needs and our focus, we may propose:
+    If, after the briefing, there is clear alignment between your needs and our
+    focus, we may propose:
   </p>
   <ul>
     <li>a deep-dive architectural review of your AI systems,</li>
     <li>a safety and alignment assessment for agentic or autonomous components,</li>
     <li>a co-design engagement for new reasoning frameworks or memory structures,</li>
-    <li>a standing advisory relationship for ongoing decisions at the frontier.</li>
+    <li>a standing advisory relationship for ongoing frontier decisions.</li>
   </ul>
 
   <h2>How to request one</h2>
   <p>
-    Use the briefing request form on the main page. We read all serious submissions and respond when there is a genuine basis for collaboration.
+    A short briefing is usually the best first step. We read all serious
+    submissions and respond when there is a genuine basis for a working
+    session.
   </p>
-  <p>
-    If we decline, it is usually because the engagement is better served by conventional consultancies, or because your risk surface does not justify the level of work we do.
-  </p>
+
+  <div class="cta">
+    To request a briefing, email:
+    <br /><br />
+    <strong><a href="mailto:asicai@protonmail.com">asicai@protonmail.com</a></strong>
+    <br /><br />
+    Include:
+    <ul>
+      <li>who you are and what you’re responsible for,</li>
+      <li>where AI already touches your organisation,</li>
+      <li>what keeps you awake at night about the next 12–24 months.</li>
+    </ul>
+    <p class="note">
+      We keep briefings strictly confidential and can work under NDA where
+      appropriate.
+    </p>
+  </div>
+
 </div>
+
+<footer>
+  © 2024 ASI — Artificial Intelligence Answers. Briefing Protocol.
+</footer>
+
 </body>
 </html>
-

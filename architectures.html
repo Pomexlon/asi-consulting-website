@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASI — Advanced Architectures & Frontier AI Systems</title>
+
+  <style>
+    body {
+      margin: 0;
+      background: #0b0f19;
+      color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+        Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 40px;
+      background: #0b0f19cc;
+      backdrop-filter: blur(6px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    header a {
+      color: #d1d5db;
+      margin-left: 28px;
+      text-decoration: none;
+      font-size: 14px;
+      letter-spacing: 0.3px;
+    }
+
+    header a:hover {
+      color: #fbbf24;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 24px;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 600;
+      color: #f9fafb;
+      line-height: 1.2;
+      margin-bottom: 18px;
+    }
+
+    h2 {
+      font-size: 26px;
+      font-weight: 600;
+      margin-bottom: 10px;
+      color: #f9fafb;
+    }
+
+    h3 {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: #fbbf24;
+    }
+
+    .lead {
+      font-size: 17px;
+      color: #a1a1aa;
+      max-width: 760px;
+      margin-bottom: 32px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(251, 191, 36, 0.4);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #fbbf24;
+      margin-bottom: 18px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 24px;
+    }
+
+    .two-col {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    .card {
+      padding: 24px;
+      background: #111827;
+      border-radius: 16px;
+      border: 1px solid #1f2937;
+      font-size: 14px;
+      color: #d1d5db;
+    }
+
+    ul {
+      padding-left: 18px;
+    }
+
+    li {
+      margin-bottom: 6px;
+    }
+
+    .label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #9ca3af;
+      margin-bottom: 4px;
+    }
+
+    .inline-link {
+      color: #fbbf24;
+      text-decoration: none;
+    }
+
+    .inline-link:hover {
+      text-decoration: underline;
+    }
+
+    .back-link {
+      display: inline-block;
+      margin-top: 32px;
+      font-size: 13px;
+      color: #9ca3af;
+      text-decoration: none;
+    }
+
+    .back-link:hover {
+      color: #fbbf24;
+    }
+
+    footer {
+      padding: 50px 24px;
+      text-align: center;
+      color: #52525b;
+      font-size: 13px;
+    }
+
+    .muted {
+      color: #9ca3af;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div style="font-weight:600; letter-spacing:1px; color:white;">ASI</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="briefing.html">Briefing</a>
+    <a href="architectures.html">Architectures</a>
+    <a href="mailto:asicai@protonmail.com">Contact</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <span class="pill">Advanced Architectures · Near-AGI System Design</span>
+
+  <h1>Designing reasoning systems that do not fall apart under real-world complexity.</h1>
+
+  <p class="lead">
+    This page is for people who live close to the frontier: labs, founders, and
+    investors who are already touching emergent behaviour. We work on the
+    scaffolding around such systems — how they remember, how they reason, what
+    they are allowed to do, and how they fail safely when the world pushes back.
+  </p>
+
+  <!-- Core pillars -->
+  <div class="grid two-col" style="margin-bottom:40px;">
+    <div class="card">
+      <h3>Invariant-Gated Long Reasoners (IGLR)</h3>
+      <p>
+        Architectures for multi-step reasoning that must stay self-consistent as
+        context expands and goals evolve.
+      </p>
+      <ul>
+        <li>Gated reasoning chains with hard invariants that cannot be crossed.</li>
+        <li>Structured “self-doubt” checkpoints and counter-factual branches.</li>
+        <li>Explicit separation of <em>what the system thinks</em> vs
+          <em>what it is allowed to do</em>.</li>
+        <li>Designs that stabilise under load rather than amplifying drift.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Autonomous Memory Lattices</h3>
+      <p>
+        Memory systems that do more than store text — they encode
+        responsibilities, obligations, and reversible commitments.
+      </p>
+      <ul>
+        <li>Multi-layered memory (working, episodic, institutional).</li>
+        <li>Retention policies tied to risk, not just token count.</li>
+        <li>Patterns for “forgetting safely” without losing auditability.</li>
+        <li>Lattices that can be transplanted between model generations.</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Safety & capability -->
+  <div class="grid two-col" style="margin-bottom:40px;">
+    <div class="card">
+      <h3>Safety, Overrides & Governance</h3>
+      <p>
+        Control surfaces for systems that have genuine leverage in the world.
+      </p>
+      <ul>
+        <li>Toolchain integrity &amp; reversible action pathways.</li>
+        <li>Well-defined “operating envelopes” and hard stops.</li>
+        <li>Human-in-the-loop and human-on-the-loop oversight designs.</li>
+        <li>Structured audit traces that regulators, boards, and insurers
+          can actually read.</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Capability Under Adversarial Pressure</h3>
+      <p>
+        How the system behaves when the environment is actively trying to game it.
+      </p>
+      <ul>
+        <li>Red-team prompt patterns and escalation paths.</li>
+        <li>Resilience against goal-hijacking and covert optimisation.</li>
+        <li>Stress-testing chains of thought under conflicting objectives.</li>
+        <li>Simulation harnesses for “what happens if this is mis-used?”</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Engagement modes -->
+  <div class="card" style="margin-bottom:30px;">
+    <div class="label">How we usually work</div>
+    <h2>Engagement patterns for frontier systems</h2>
+    <p>
+      Every organisation arrives with different constraints. The patterns
+      below are typical starting points, not fixed products.
+    </p>
+    <h3>1. Architecture Audit</h3>
+    <p>
+      We review your current or planned setup: models, tools, data flows,
+      control surfaces, incentives. Output is a direct report: where it is
+      fragile, where it quietly violates its own assumptions, and where you
+      are carrying more risk than you realise.
+    </p>
+    <h3>2. Design Sprint</h3>
+    <p>
+      A focused sprint to design or refactor the core reasoning architecture,
+      invariants, and safety surfaces. We leave you with reference diagrams,
+      threat models, and an implementation roadmap your team can execute.
+    </p>
+    <h3>3. Co-Lab Build or Oversight</h3>
+    <p>
+      We either co-build with your engineers or act as an architectural
+      conscience while they execute. The goal is simple: systems that do what
+      you intended, and fail in ways you can live with.
+    </p>
+  </div>
+
+  <!-- Callout -->
+  <p class="muted">
+    If you are already running experiments with emergent behaviour and need
+    another pair of eyes — or want to pressure-test a design before you ship —
+    you can start with a short briefing and an architecture review.
+  </p>
+
+  <a class="back-link" href="mailto:asicai@protonmail.com"></a>
+    → Email to request an advanced architecture discussion
+  </a>
+
+</div>
+
+<footer>
+  © 2024 ASI — Artificial Intelligence Answers. Advanced Architectures.
+</footer>
+
+</body>
+</html>
