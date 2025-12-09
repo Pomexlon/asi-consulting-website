@@ -2,309 +2,502 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASI — Artificial Intelligence Answers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>ASI — Frontier AI Architecture & Reasoning Systems</title>
+
+  <!-- Core SEO -->
+  <meta name="description" content="ASI designs frontier AI architectures, reasoning layers, and safety systems for founders, operators, and investors working at the edge of capability and risk." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ASI — Frontier AI Architecture & Reasoning Systems" />
+  <meta property="og:description" content="Architectures and safety frameworks for emergent AI systems. We design reasoning structures, invariants, oversight pathways, and stabilisation patterns for frontier-grade intelligence." />
+  <meta property="og:image" content="https://asi-c.co.uk/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://asi-c.co.uk/" />
 
   <style>
+    :root {
+      --bg: #050608;
+      --bg-soft: #0b0d11;
+      --fg: #f5f5f5;
+      --muted: #9ca3af;
+      --accent: #9cc9ff;
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --radius-lg: 24px;
+      --radius-md: 18px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      background: #0b0f19;
-      color: #e5e7eb;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif;
+      padding: 0;
+      background: radial-gradient(circle at top left, #101320 0, #050608 45%, #020309 100%);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+        -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       line-height: 1.6;
+    }
+
+    .shell {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 2.75rem 1.5rem 4rem;
     }
 
     header {
       display: flex;
-      justify-content: space-between;
       align-items: center;
-      padding: 24px 40px;
-      background: #0b0f19cc;
-      backdrop-filter: blur(6px);
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      justify-content: space-between;
+      gap: 1.5rem;
+      margin-bottom: 3rem;
     }
 
-    header a {
-      color: #d1d5db;
-      margin-left: 28px;
-      text-decoration: none;
-      font-size: 14px;
-      letter-spacing: 0.3px;
+    .brand {
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      opacity: 0.8;
     }
 
-    header a:hover {
-      color: #fbbf24;
-    }
-
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 80px 24px;
-    }
-
-    h1 {
-      font-size: 48px;
-      font-weight: 600;
-      color: white;
-      line-height: 1.2;
-      margin-bottom: 20px;
-    }
-
-    .highlight {
-      color: #fbbf24;
-    }
-
-    .subtext {
-      font-size: 18px;
-      color: #a1a1aa;
-      max-width: 600px;
-      margin-bottom: 40px;
-    }
-
-    .button-row {
+    nav {
       display: flex;
-      gap: 16px;
-      margin-top: 20px;
+      gap: 1.75rem;
+      font-size: 0.85rem;
     }
 
-    .btn-primary {
-      background: #fbbf24;
-      color: #0b0f19;
-      padding: 14px 26px;
-      font-weight: 600;
-      border-radius: 12px;
+    nav a {
+      color: var(--muted);
       text-decoration: none;
-      box-shadow: 0 4px 15px rgba(251, 191, 36, 0.3);
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-size: 0.8rem;
     }
 
-    .btn-primary:hover {
-      background: #fcd34d;
+    nav a:hover {
+      color: var(--accent);
     }
 
-    .btn-outline {
-      border: 1px solid #4b5563;
-      color: #e5e7eb;
-      padding: 14px 26px;
-      font-weight: 600;
-      border-radius: 12px;
+    main {
+      display: flex;
+      flex-direction: column;
+      gap: 2.75rem;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.6fr);
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    @media (max-width: 880px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+
+    .hero-title {
+      font-size: clamp(1.9rem, 3vw, 2.4rem);
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 1.4rem;
+    }
+
+    .hero-sub {
+      font-size: 1rem;
+      max-width: 34rem;
+      color: var(--muted);
+      margin-bottom: 1.8rem;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      border: 1px solid var(--border-subtle);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 1rem;
+    }
+
+    .hero-pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #4ade80;
+    }
+
+    .hero-card {
+      background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(3, 7, 18, 0.98));
+      border-radius: var(--radius-lg);
+      padding: 1.75rem 1.75rem 1.5rem;
+      border: 1px solid var(--border-subtle);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, 0.7);
+    }
+
+    .hero-card h2 {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin: 0 0 0.9rem;
+      opacity: 0.8;
+    }
+
+    .hero-card p {
+      margin: 0 0 1.1rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+
+    .hero-card strong {
+      color: var(--fg);
+    }
+
+    .cta-email {
+      display: inline-flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+    }
+
+    .cta-email a {
+      color: var(--accent);
       text-decoration: none;
+      font-weight: 500;
     }
 
-    .btn-outline:hover {
-      border-color: #fbbf24;
-      color: #fbbf24;
-    }
-
-    .section-title {
-      font-size: 28px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      color: white;
-    }
-
-    .section-sub {
-      font-size: 16px;
-      color: #a1a1aa;
-      margin-bottom: 32px;
+    .cta-email a:hover {
+      text-decoration: underline;
     }
 
     .grid {
       display: grid;
-      gap: 24px;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.75rem;
     }
 
-    .pillars {
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    @media (max-width: 880px) {
+      .grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
     }
 
-    .pillar-box {
-      padding: 24px;
-      background: #111827;
-      border: 1px solid #1f2937;
+    .card {
+      background: radial-gradient(circle at top left, #111827 0, #020617 70%);
+      border-radius: var(--radius-md);
+      padding: 1.4rem 1.4rem 1.25rem;
+      border: 1px solid var(--border-subtle);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card-title {
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      margin-bottom: 0.6rem;
+      opacity: 0.85;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0.1rem 0;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+      margin: 0.5rem 0 0;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .card ul li::before {
+      content: "– ";
+    }
+
+    .card-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1.1rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      opacity: 0.65;
+    }
+
+    .section-heading {
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      opacity: 0.7;
+      margin-top: 2.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-sub {
+      font-size: 0.95rem;
+      color: var(--muted);
+      max-width: 32rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .work-list {
+      display: grid;
+      gap: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    .work-item {
       border-radius: 16px;
+      border: 1px solid var(--border-subtle);
+      padding: 1.2rem 1.35rem 1.1rem;
+      background: rgba(5, 6, 9, 0.9);
     }
 
-    .pillar-title {
-      font-size: 16px;
-      color: #fbbf24;
-      font-weight: 600;
-      margin-bottom: 8px;
+    .work-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      opacity: 0.65;
+      margin-bottom: 0.2rem;
     }
 
-    .pillar-body {
-      font-size: 14px;
-      color: #d1d5db;
+    .work-title {
+      font-size: 0.95rem;
+      margin-bottom: 0.15rem;
     }
 
-    .systems {
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    .work-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
     }
 
-    .system-box {
-      padding: 24px;
-      background: #111827;
-      border: 1px solid #1f2937;
-      border-radius: 16px;
+    .research-card {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      padding: 1.3rem 1.4rem 1.15rem;
+      background: radial-gradient(circle at top left, #020617 0, #020309 65%);
+    }
+
+    .research-card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.88rem;
+    }
+
+    .research-card a:hover {
+      text-decoration: underline;
     }
 
     footer {
-      padding: 60px 24px;
-      text-align: center;
-      color: #52525b;
-      font-size: 13px;
+      border-top: 1px solid rgba(148, 163, 184, 0.24);
+      margin-top: 3.1rem;
+      padding-top: 1.4rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
     }
 
-    .cta-box {
-      margin-top: 60px;
-      padding: 40px;
-      background: linear-gradient(
-        90deg,
-        rgba(251, 191, 36, 0.15),
-        rgba(251, 191, 36, 0.05),
-        #0b0f1900
-      );
-      border-radius: 20px;
-      border: 1px solid rgba(251, 191, 36, 0.15);
+    footer span {
+      display: block;
+    }
+
+    @media (max-width: 640px) {
+      .shell {
+        padding-top: 2.1rem;
+      }
     }
   </style>
 </head>
-
 <body>
+  <div class="shell">
+    <header>
+      <div class="brand">ASI — Artificial Superintelligence Consulting</div>
+      <nav>
+        <a href="/about.html">About</a>
+        <a href="/architectures.html">Architectures</a>
+        <a href="/briefing.html">Briefing</a>
+        <a href="/iglr-demo.html">IGLR Demo</a>
+      </nav>
+    </header>
 
-<header>
-  <div style="font-weight:600; letter-spacing:1px; color:white;">ASI</div>
-    <nav>
-    <a href="about.html">About</a>
-    <a href="briefing.html">Briefing</a>
-    <a href="index.html#systems">Capabilities</a>
-    <a href="architectures.html">Architectures</a>
-    <a href="mailto:asicai@protonmail.com">Contact</a>
-  </nav>
-</header>
+    <main>
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="hero-pill">
+            <span class="hero-pill-dot"></span>
+            FRONTIER AI ARCHITECTURE & REASONING SYSTEMS
+          </div>
+          <h1 class="hero-title">Designing intelligence for the edge of capability and risk.</h1>
+          <p class="hero-sub">
+            ASI works with founders, operators, and investors to design AI systems that stay stable under pressure:
+            clear architectures, disciplined reasoning layers, and safety baked into the design.
+          </p>
+        </div>
 
-<div class="container">
+        <aside class="hero-card">
+          <h2>Work with us</h2>
+          <p>
+            If you’re pushing into emergent AI behaviour — agents, automation, decision systems — we help you decide
+            <strong>what to build, how to build it, and where not to trust the machine.</strong>
+          </p>
+          <div class="cta-email">
+            <span>Send three bullet points describing:</span>
+            <span>• your context<br />• your constraints<br />• your ideal outcome</span>
+            <span>
+              → <a href="mailto:asicai@protonmail.com">asicai@protonmail.com</a>
+            </span>
+          </div>
+        </aside>
+      </section>
 
-  <!-- HERO -->
-  <h1>
-    Build AI that <span class="highlight">actually moves the needle</span> —
-    not just decorate your slide deck.
-  </h1>
+      <!-- THREE DISCIPLINES -->
+      <section>
+        <h2 class="section-heading">Three disciplines. One ethos.</h2>
+        <p class="section-sub">
+          We sit between strategy decks and raw implementation — translating hype and uncertainty into concrete,
+          inspectable systems.
+        </p>
 
-  <p class="subtext">
-    ASI works with founders, operators, and investors to design AI systems that
-    are useful on Monday morning — grounded in clarity, ethics, and measurable
-    results.
-  </p>
+        <div class="grid">
+          <article class="card">
+            <div class="card-badge">01</div>
+            <div class="card-title">Strategic AI Thinking</div>
+            <p>We help you cut through vendor noise and vague promises.</p>
+            <ul>
+              <li>AI roadmaps grounded in your real constraints</li>
+              <li>Architecture options, trade-offs, and failure modes</li>
+              <li>Stress-testing assumptions before you commit budget</li>
+            </ul>
+          </article>
 
-  <div class="button-row">
-    <a class="btn-primary" href="briefing.html">Request ASIC Briefing</a>
-    <a class="btn-outline" href="#systems">Explore Our Systems</a>
+          <article class="card">
+            <div class="card-badge">02</div>
+            <div class="card-title">Practical Agent Systems</div>
+            <p>Named, narrow agents that quietly do the work — not hype demos.</p>
+            <ul>
+              <li>Signal triage and prioritisation</li>
+              <li>Stable summarisation and decision support</li>
+              <li>Systems that reduce cognitive load, not add dashboards</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-badge">03</div>
+            <div class="card-title">Ethical & Safe by Design</div>
+            <p>Safety is an architectural property, not a disclaimer.</p>
+            <ul>
+              <li><strong>Invariants</strong> — rules the system cannot violate</li>
+              <li><strong>Observability</strong> — reasoning you can inspect</li>
+              <li><strong>Abstention</strong> — knowing when not to answer</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- RESEARCH / IGLR -->
+      <section>
+        <h2 class="section-heading">Featured research</h2>
+        <div class="research-card">
+          <div class="card-title">IGLR — Invariant-Gated Long Reasoners</div>
+          <p style="font-size:0.9rem; color:var(--muted); margin:0.4rem 0 0.8rem;">
+            Standard language models behave like brilliant storytellers. IGLR behaves more like a careful analyst with
+            guardrails — prioritising internal consistency and the ability to say “I don’t know” over fluent guesses.
+          </p>
+          <p style="font-size:0.86rem; color:var(--muted); margin:0 0 0.6rem;">
+            IGLR is research-in-progress, not a product. But the principles already influence every system we design.
+          </p>
+          <a href="/iglr-demo.html">View the IGLR demo →</a>
+        </div>
+      </section>
+
+      <!-- SELECTED WORK -->
+      <section>
+        <h2 class="section-heading">Selected work (anonymised)</h2>
+        <p class="section-sub">
+          A few representative outcomes from recent projects. Details are simplified and anonymised, but the structures
+          and failure modes are real.
+        </p>
+
+        <div class="work-list">
+          <article class="work-item">
+            <div class="work-label">Founder</div>
+            <div class="work-title">Operational chaos → quiet, reliable agents</div>
+            <p class="work-text">
+              A seed-stage SaaS founder was drowning in investor updates, customer emails, and product prioritisation.
+              Standard LLM automations were inconsistent and occasionally hallucinated details. We designed a small set
+              of named agents, wrapped in a reasoning loop, that reduced weekly “thinking load” by ~40% with zero
+              Monday-morning surprises.
+            </p>
+          </article>
+
+          <article class="work-item">
+            <div class="work-label">Operator</div>
+            <div class="work-title">Conflicting inputs → surfaced signals</div>
+            <p class="work-text">
+              An operations lead needed summaries across conflicting reports from engineering, support, and sales. Most
+              tools blended the contradictions into a single narrative. Our gating layer refused to blur facts and
+              instead highlighted gaps, disagreements, and unknowns — enabling better decisions with fewer meetings.
+            </p>
+          </article>
+
+          <article class="work-item">
+            <div class="work-label">Investor</div>
+            <div class="work-title">AI due diligence → structured risk map</div>
+            <p class="work-text">
+              A fund exploring a frontier AI company wanted more than pitch-deck theatre. We built a reasoning pipeline
+              that separated facts, claims, and speculation, then graded risk across technical debt, data exposure, and
+              alignment. The output was a clear risk map the investor used to shape terms and follow-up questions.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <section>
+        <h2 class="section-heading">Next step</h2>
+        <p class="section-sub">
+          If you’re operating near the edge of AI capability and need systems you can trust, not just demos, we should
+          talk.
+        </p>
+        <div class="cta-email">
+          <span>Send three bullet points about your context, constraints, and ideal outcome to:</span>
+          <span><a href="mailto:asicai@protonmail.com">asicai@protonmail.com</a></span>
+          <span>We’ll reply with a concrete next step — no sales script, just architecture.</span>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>ASI — Artificial Superintelligence Consulting.</span>
+      <span>Practical intelligence for the era that demands it.</span>
+    </footer>
   </div>
-
-  <br><br><br>
-
-  <!-- PILLARS -->
-  <h2 class="section-title">What We Actually Do</h2>
-  <p class="section-sub">
-    Three pillars guide every engagement we deliver.
-  </p>
-
-  <div class="grid pillars">
-    <div class="pillar-box">
-      <div class="pillar-title">Strategic AI Thinking</div>
-      <div class="pillar-body">
-        We help you cut through noise, choose the right direction, and avoid
-        months of wasted time on the wrong build.
-      </div>
-    </div>
-
-    <div class="pillar-box">
-      <div class="pillar-title">Practical Agent Systems</div>
-      <div class="pillar-body">
-        We design agent workflows that plug into your tools and data — producing
-        output that matters.
-      </div>
-    </div>
-
-    <div class="pillar-box">
-      <div class="pillar-title">Ethical & Safe by Design</div>
-      <div class="pillar-body">
-        Every system includes guardrails, governance, and future-proof
-        safety patterns.
-      </div>
-    </div>
-  </div>
-
-  <br><br><br>
-
-  <!-- SYSTEM STACK -->
-    <h2 id="systems" class="section-title">The ASI System Stack</h2>
-  <p class="section-sub">
-    We build a small number of named systems that solve real operational
-    problems. Underneath them sit the architectures we use when things get
-    serious — you can read more on the <a href="architectures.html" style="color:#fbbf24; text-decoration:none;">Architectures</a> page.
-  </p>
-
-  <div class="grid systems">
-    <div class="system-box">
-      <strong>Scout</strong><br>
-      <span style="font-size:12px; color:#fbbf24; text-transform:uppercase;">
-        ASI System
-      </span>
-      <p style="margin-top:8px;">Always-on research and signal scanning across markets and competitors.</p>
-    </div>
-
-    <div class="system-box">
-      <strong>SIREN</strong><br>
-      <span style="font-size:12px; color:#fbbf24; text-transform:uppercase;">
-        ASI System
-      </span>
-      <p style="margin-top:8px;">
-        Early-warning layer for risk, sentiment shifts, and environment
-        instability.
-      </p>
-    </div>
-
-    <div class="system-box">
-      <strong>HOPE–LUCID Core</strong><br>
-      <span style="font-size:12px; color:#fbbf24; text-transform:uppercase;">
-        ASI System
-      </span>
-      <p style="margin-top:8px;">
-        Reasoning engine for planning, decisions, and multi-step workflows.
-      </p>
-    </div>
-
-    <div class="system-box">
-      <strong>JIGSAW</strong><br>
-      <span style="font-size:12px; color:#fbbf24; text-transform:uppercase;">
-        ASI System
-      </span>
-      <p style="margin-top:8px;">
-        Pattern-spotter that connects scattered data into clear action.
-      </p>
-    </div>
-  </div>
-
-  <br><br><br>
-
-  <!-- CTA -->
-  <div class="cta-box">
-    <h2 style="color:#fbbf24; margin-bottom:10px;">Ready for a working session?</h2>
-    <p style="color:#e5e7eb; max-width:650px;">
-      Share 3–5 bullet points about where you are and what you’re trying to
-      build. We’ll reply with honest next steps — even if it’s not us.
-    </p>
-    <div style="margin-top:20px;">
-      <a class="btn-primary" href="mailto:asicai@protonmail.com">Start the Conversation</a>
-    </div>
-  </div>
-
-</div>
-
-<footer>
-  © 2024 ASI — Artifi
+</body>
+</html>

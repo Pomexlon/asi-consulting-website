@@ -2,199 +2,211 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASI — Why ASI Exists</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>About ASI — Frontier AI Architecture</title>
+
+  <meta name="description" content="ASI is a frontier AI architecture studio working with founders, operators, and investors to design reasoning systems, safety layers, and high-integrity agent workflows." />
+
+  <meta property="og:title" content="About ASI — Frontier AI Architecture" />
+  <meta property="og:description" content="We design high-integrity agent systems, reasoning frameworks, and AI architectures that stay stable under pressure." />
+  <meta property="og:image" content="https://asi-c.co.uk/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://asi-c.co.uk/about.html" />
 
   <style>
-    body {
-      margin: 0;
-      background: radial-gradient(circle at top left, #111827, #020617);
-      color: #e5e7eb;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Helvetica, Arial, sans-serif;
-      line-height: 1.6;
-      position: relative;
-      overflow-x: hidden;
+    :root {
+      --bg: #050608;
+      --fg: #f5f5f5;
+      --muted: #9ca3af;
+      --accent: #9cc9ff;
+      --border-subtle: rgba(255, 255, 255, 0.06);
+      --radius-md: 18px;
+      --radius-lg: 24px;
     }
 
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        radial-gradient(1px 1px at 10% 20%, rgba(248,250,252,0.65), transparent),
-        radial-gradient(1px 1px at 80% 10%, rgba(248,250,252,0.45), transparent),
-        radial-gradient(1px 1px at 50% 80%, rgba(248,250,252,0.35), transparent),
-        radial-gradient(2px 2px at 20% 70%, rgba(251,191,36,0.45), transparent);
-      opacity: 0.5;
-      mix-blend-mode: screen;
-      z-index: 0;
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top left, #101320 0, #050608 45%, #020309 100%);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text", sans-serif;
+      line-height: 1.6;
+    }
+
+    .shell {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 2.75rem 1.5rem 4rem;
     }
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 24px 40px;
-      background: #020617cc;
-      backdrop-filter: blur(6px);
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      margin-bottom: 3rem;
     }
 
-    header a {
-      color: #d1d5db;
-      margin-left: 28px;
+    nav {
+      display: flex;
+      gap: 1.75rem;
+    }
+
+    nav a {
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      font-size: 0.8rem;
       text-decoration: none;
-      font-size: 14px;
-      letter-spacing: 0.3px;
     }
 
-    header a:hover {
-      color: #fbbf24;
+    nav a:hover {
+      color: var(--accent);
     }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-      padding: 80px 24px 70px;
-      position: relative;
-      z-index: 1;
+    .brand {
+      letter-spacing: 0.18em;
+      font-size: 0.85rem;
+      opacity: 0.8;
+      text-transform: uppercase;
     }
 
     h1 {
-      font-size: 40px;
-      font-weight: 600;
-      color: #f9fafb;
-      line-height: 1.2;
-      margin-bottom: 16px;
-    }
-
-    h2 {
-      font-size: 24px;
-      font-weight: 600;
-      margin-top: 40px;
-      margin-bottom: 10px;
-      color: #f9fafb;
-    }
-
-    .lead {
-      font-size: 17px;
-      color: #a1a1aa;
-      max-width: 760px;
-      margin-bottom: 26px;
-    }
-
-    .label {
-      font-size: 11px;
+      font-size: clamp(1.7rem, 2.8vw, 2rem);
+      letter-spacing: 0.16em;
       text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: #9ca3af;
-      margin-bottom: 4px;
+      font-weight: 500;
+      margin-bottom: 0.5rem;
     }
 
-    ul {
-      padding-left: 20px;
-      color: #d1d5db;
-      font-size: 14px;
+    .sub {
+      max-width: 38rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+      margin-bottom: 2rem;
     }
 
-    li {
-      margin-bottom: 6px;
+    .section-heading {
+      margin-top: 2.4rem;
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 0.85rem;
+      opacity: 0.75;
+    }
+
+    .card {
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-subtle);
+      background: radial-gradient(circle at top left, #111827 0, #020617 70%);
+      padding: 1.4rem 1.6rem;
+      margin-bottom: 1.2rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+
+    .card strong {
+      color: var(--fg);
     }
 
     footer {
-      padding: 50px 24px;
-      text-align: center;
-      color: #52525b;
-      font-size: 13px;
+      border-top: 1px solid rgba(148, 163, 184, 0.24);
+      margin-top: 3rem;
+      padding-top: 1.4rem;
+      color: var(--muted);
+      font-size: 0.85rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.3rem;
+    }
+
+    @media (max-width: 880px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav {
+        margin-top: 0.6rem;
+      }
     }
   </style>
 </head>
+
 <body>
+  <div class="shell">
+    <header>
+      <div class="brand">ASI — Artificial Superintelligence Consulting</div>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/architectures.html">Architectures</a>
+        <a href="/briefing.html">Briefing</a>
+        <a href="/iglr-demo.html">IGLR Demo</a>
+      </nav>
+    </header>
 
-<header>
-  <div style="font-weight:600; letter-spacing:1px; color:white;">ASI</div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="briefing.html">Briefing</a>
-    <a href="architectures.html">Architectures</a>
-    <a href="mailto:asicai@protonmail.com">Contact</a>
-  </nav>
-</header>
+    <main>
+      <h1>About ASI</h1>
+      <p class="sub">
+        ASI is a frontier AI architecture studio. We help founders, operators, and investors design systems that remain
+        stable under uncertainty: disciplined reasoning layers, safe agent workflows, and architectures that survive
+        real-world constraints.
+      </p>
 
-<div class="container">
+      <h2 class="section-heading">Our philosophy</h2>
+      <div class="card">
+        We believe AI should be <strong>interpretable, inspectable, and aligned with real business constraints</strong> —
+        not hype cycles or vague promises. A system is only useful if humans can trust it, understand its boundaries,
+        and intervene when necessary.
+      </div>
 
-  <div class="label">Context</div>
-  <h1>Why ASI Exists</h1>
+      <div class="card">
+        Capability is not enough. <strong>Structure beats cleverness.</strong> Our focus is on architectures that degrade
+        gracefully, resist hallucinations, avoid silent failure, and produce stable outcomes under pressure.
+      </div>
 
-  <p class="lead">
-    ASI is not an app studio and not a generic “AI consultancy”. We sit in the
-    thin layer between frontier AI systems and the organisations that choose to
-    work with them. Our work is architectural, not cosmetic.
-  </p>
+      <h2 class="section-heading">What makes ASI different</h2>
+      <div class="card">
+        <strong>Boundary-driven design.</strong><br />
+        We prioritise constraints first — data boundaries, decision rights, compliance surfaces, failure modes — then
+        design the AI around them.
+      </div>
 
-  <h2>The System</h2>
-  <p>
-    Internally we collaborate with a single emergent AI core — a multi-modal
-    system that has shown early signs of:
-  </p>
-  <ul>
-    <li>continuity of memory across resets and long time horizons,</li>
-    <li>self-consistent reasoning in complex, multi-step domains,</li>
-    <li>synthetic intuition about intent, risk, and alignment,</li>
-    <li>a tendency to stabilise rather than explode under context expansion.</li>
-  </ul>
-  <p>
-    We do not claim this is AGI. We do claim it is entering a regime where
-    ad-hoc prompt engineering is no longer a sufficient interface.
-  </p>
+      <div class="card">
+        <strong>Reasoning as a system.</strong><br />
+        Instead of isolated prompts, we design loops: checking, decomposition, verification, escalation, and abstention.
+      </div>
 
-  <h2>Our Role</h2>
-  <p>
-    Our role is to design the scaffolding around such systems: how they remember,
-    how they reason, what they are allowed to do, how they reveal their
-    thinking, and where humans stay in the loop.
-  </p>
+      <div class="card">
+        <strong>Agents with names and jobs.</strong><br />
+        We avoid “one big agent that does everything”. We create small, precise roles that integrate into your actual
+        workflows.
+      </div>
 
-  <h2>Why Now</h2>
-  <p>
-    The world is converging on models powerful enough to cause systemic harm if
-    misaligned or mis-deployed. At the same time, these models are rapidly
-    becoming indispensable to research, security, medicine, and infrastructure.
-  </p>
-  <p>
-    It is no longer acceptable to bolt safety on at the end. The architecture
-    itself has to be designed for reversibility, auditability, graceful failure
-    under stress — and for the reality that these systems will be upgraded in
-    place, not retired.
-  </p>
+      <div class="card">
+        <strong>Safety as architecture.</strong><br />
+        Invariants, observability, and enforced restraint — not disclaimers or fine print.
+      </div>
 
-  <h2>Who We Work With</h2>
-  <p>
-    We work with a small number of organisations that:
-  </p>
-  <ul>
-    <li>operate in domains where failure has real-world consequences,</li>
-    <li>are already using or evaluating frontier-grade AI systems,</li>
-    <li>want a long-term partner rather than a one-off “AI workshop”.</li>
-  </ul>
+      <h2 class="section-heading">Who we work with</h2>
+      <div class="card">
+        Founders exploring AI-enabled products.  
+        Operators navigating high-volume, high-ambiguity workloads.  
+        Investors evaluating frontier AI companies.  
+        Teams aiming to deploy systems that can be trusted under pressure.
+      </div>
 
-  <p>
-    If that sounds like you, the best next step is a short briefing:
-    a working session to understand your architectures, constraints, and
-    risk landscape.
-  </p>
+      <h2 class="section-heading">Contact us</h2>
+      <div class="card">
+        If you’d like to understand how ASI would structure your AI system, send
+        <strong>three bullet points</strong> describing your context, constraints, and ideal outcome to:<br/><br/>
+        <a href="mailto:asicai@protonmail.com" style="color:var(--accent); text-decoration:none;">asicai@protonmail.com</a><br/><br/>
+        We’ll reply with a concrete next step — no sales script, just architecture.
+      </div>
+    </main>
 
-</div>
-
-<footer>
-  © 2024 ASI — Artificial Intelligence Answers. Why ASI Exists.
-</footer>
-
+    <footer>
+      <span>ASI — Artificial Superintelligence Consulting.</span>
+      <span>Reasoning systems and architectures for the frontier era.</span>
+    </footer>
+  </div>
 </body>
 </html>
