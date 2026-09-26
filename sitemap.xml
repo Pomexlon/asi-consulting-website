@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://www.asi-c.co.uk/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://www.asi-c.co.uk/about.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://www.asi-c.co.uk/briefing.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://www.asi-c.co.uk/</loc></url>
+  <url><loc>https://www.asi-c.co.uk/about.html</loc></url>
+  <url><loc>https://www.asi-c.co.uk/access.html</loc></url>
+  <url><loc>https://www.asi-c.co.uk/aifile.html</loc></url>
+  <url><loc>https://www.asi-c.co.uk/vaiseo.html</loc></url>
+  <url><loc>https://www.asi-c.co.uk/nb.html</loc></url>
+  <url><loc>https://www.asi-c.co.uk/faike.html</loc></url>
+  <url><loc>https://www.asi-c.co.uk/iglr.html</loc></url>
+  <url><loc>https://www.asi-c.co.uk/hs-agi.html</loc></url>
+  <url><loc>https://www.asi-c.co.uk/privacy.html</loc></url>
+  <url><loc>https://www.asi-c.co.uk/work-with-us.html</loc></url>
 </urlset>
-
